@@ -6,16 +6,20 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText 
     <Wrap bgImage={backgroundImg}>
       <ItemText>
         <h1>{ title }</h1>
-        <h2>{ description }</h2>
+        { description &&
+          <h2>{ description }</h2>
+        }
       </ItemText>
       <Buttons>
         <ButtonGroup>
           <LeftButton>
             { leftBtnText }
           </LeftButton>
-          <RightButton>
-            { rightBtnText }
-          </RightButton>
+          { rightBtnText &&
+            <RightButton>
+              { rightBtnText }
+            </RightButton>
+          }
         </ButtonGroup>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
@@ -38,13 +42,13 @@ const Wrap = styled.div`
 `
 
 const ItemText = styled.h1`
-  padding-top: 10vh;
+  padding-top: 16vh;
   text-align: center;
 `
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -59,11 +63,11 @@ const LeftButton = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  opacity: 0.85;
+  opacity: 0.80;
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
-  margin: 8px;
+  margin: 10px;
 `
 
 const RightButton = styled(LeftButton)`
@@ -73,7 +77,8 @@ const RightButton = styled(LeftButton)`
 `
 
 const DownArrow = styled.img`
-  height: 40px;
+  height: 23px;
+  margin: 10px 0 50px;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
 `
