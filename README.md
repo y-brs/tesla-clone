@@ -2,9 +2,8 @@
 
 This Project is a beginner friendly project I built using React. Some key Aspects:
 
-- ;
-- ;
-- .
+- Redux;
+- Styled Components.
 
 Deployed live on LINK. Check out!
 
