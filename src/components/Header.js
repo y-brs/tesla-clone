@@ -130,6 +130,7 @@ const RightMenu = styled.ul`
 
 const CustomMenu = styled(MenuIcon)`
   cursor: pointer;
+  margin-left: 10px;
 `
 
 const BurgerNavWrapper = styled.ul`
@@ -141,7 +142,6 @@ const BurgerNavWrapper = styled.ul`
   width: 400px;
   z-index: 100;
   box-shadow: 0 4px 32px 0 rgba(0, 0, 0, .5);
-  // background-color: hsla(0,0%,50.2%,.5);
 
   transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
   transition: transform 0.2s ease-in;
@@ -181,4 +181,5 @@ const CloseWrapper = styled.div`
 
 const CustomClose = styled(CloseIcon)`
   cursor: pointer;
+  background: #ccc;
 `
