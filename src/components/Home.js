@@ -11,6 +11,7 @@ function Home() {
         backgroundImg="model-s.jpg"
         leftBtnText="Custom Order"
         rightBtnText="Existing Inventory"
+        downArrow={true}
       />
       <Section
         title="Model Y"

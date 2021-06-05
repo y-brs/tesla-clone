@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Section({ title, description, backgroundImg, leftBtnText, rightBtnText }) {
+function Section({ title, description, backgroundImg, leftBtnText, rightBtnText, downArrow }) {
   return (
     <Wrap bgImage={backgroundImg}>
       <ItemText>
@@ -21,7 +21,11 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText 
             </RightButton>
           }
         </ButtonGroup>
-        <DownArrow src="/images/down-arrow.svg" />
+        <DownArrowGroup>
+          { downArrow &&
+            <DownArrow src="/images/down-arrow.svg" />
+          }
+        </DownArrowGroup>
       </Buttons>
     </Wrap>
   )
@@ -29,7 +33,7 @@ function Section({ title, description, backgroundImg, leftBtnText, rightBtnText 
 
 export default Section;
 
-const Wrap = styled.div`
+const Wrap = styled.section`
   width: 100vw;
   height: 100vh;
   background: url('./images/model-s.jpg') center no-repeat;
@@ -40,9 +44,12 @@ const Wrap = styled.div`
   align-items: center;
   background-image: ${props => `url("/images/${ props.bgImage }")` }
 `
-
 const ItemText = styled.h1`
   padding-top: 16vh;
+  text-align: center;
+`
+
+const Buttons = styled.div`
   text-align: center;
 `
 
@@ -53,7 +60,6 @@ const ButtonGroup = styled.div`
     flex-direction: column;
   }
 `
-
 const LeftButton = styled.div`
   background-color: rgba(23, 26, 32, 0.8);
   width: 256px;
@@ -63,26 +69,24 @@ const LeftButton = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  opacity: 0.80;
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
   margin: 10px;
 `
-
 const RightButton = styled(LeftButton)`
   background: white;
   opacity: 0.65;
   color: black;
 `
 
+const DownArrowGroup = styled.div`
+  height: 85px;
+`
+
 const DownArrow = styled.img`
-  height: 23px;
+  height: 25px;
   margin: 10px 0 50px;
   overflow-x: hidden;
   animation: animateDown infinite 1.5s;
-`
-
-const Buttons = styled.div`
-  text-align: center;
 `
