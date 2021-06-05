@@ -5,11 +5,12 @@ This Project is a beginner friendly project I built using React. Some key Aspect
 - Redux;
 - Styled Components.
 
-Deployed live on LINK. Check out!
+Deployed live on https://tesla-clone-cf7b40.netlify.app. Check out!
 
 Yooooo! 🚀
 
-SCREENSHOT
+![Screenshot 2021-06-05 at 21 41 28](https://user-images.githubusercontent.com/68222437/120902060-d6e0d000-c646-11eb-9be6-99ac73fcb5d4.png)
+
 
 # Getting Started with Create React App
 
