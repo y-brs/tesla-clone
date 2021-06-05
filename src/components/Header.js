@@ -181,5 +181,4 @@ const CloseWrapper = styled.div`
 
 const CustomClose = styled(CloseIcon)`
   cursor: pointer;
-  background: #ccc;
 `
