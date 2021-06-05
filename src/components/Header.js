@@ -37,6 +37,7 @@ function Header() {
         <MenuItem>
           <a href="#8">Account</a>
         </MenuItem>
+        <CustomMenu />
       </RightMenu>
     </Container>
   )
@@ -52,6 +53,7 @@ const Container = styled.header`
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
 `
 
@@ -60,6 +62,10 @@ const Menu = styled.ul`
   align-items: center;
   justify-content: center;
   flex: 1;
+
+  @media (max-width: 950px) {
+    display: none;
+  }
 `
 
 const MenuItem = styled.li`
@@ -71,14 +77,19 @@ const MenuItem = styled.li`
     text-decoration: uppercase;
     padding: 10px 15px;
     color: #171a20;
+    border-radius: var(--border-radius);
   }
 
   a:hover {
-    background-color:hsla(0, 0%, 50.2%, .125);
-    border-radius: 100px;
+    background-color: hsla(0, 0%, 50.2%, .125);
   }
 `
 
 const RightMenu = styled.ul`
   display: flex;
+  align-items: center;
+`
+
+const CustomMenu = styled(MenuIcon)`
+  cursor: pointer;
 `

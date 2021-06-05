@@ -56,6 +56,7 @@ const Buttons = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   margin-bottom: 10px;
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -68,7 +69,7 @@ const LeftButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px;
+  border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 12px;
   cursor: pointer;
